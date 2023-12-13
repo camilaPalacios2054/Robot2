@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background_segunda"
     tools:context=".PlayActivity">
 
     <Button
@@ -15,15 +15,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginTop="188dp"
-        android:layout_marginEnd="123dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="496dp"
         android:backgroundTint="#2723B3"
         android:text="@string/btn_on"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintBottom_toTopOf="@+id/btnDesconectar"
+        app:layout_constraintEnd_toStartOf="@+id/btnOFF"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTextoOut"
+        app:layout_constraintVertical_bias="0.772" />
 
     <Button
         android:id="@+id/btnOFF"
@@ -32,14 +33,15 @@
         android:layout_below="@+id/btnON"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="496dp"
+        android:layout_marginEnd="84dp"
         android:backgroundTint="#2723B3"
         android:gravity="center"
         android:text="@string/btn_Off"
+        app:layout_constraintBottom_toTopOf="@+id/btnDesconectar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.563"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnON" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTextoOut"
+        app:layout_constraintVertical_bias="0.784" />
 
     <Button
         android:id="@+id/btnDesconectar"
@@ -48,14 +50,13 @@
         android:layout_below="@+id/btnOFF"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#6966DC"
         android:gravity="center"
         android:text="@string/btn_desconectar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOFF" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtMensaje"
@@ -65,16 +66,18 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="364dp"
         android:layout_marginEnd="144dp"
         android:gravity="center"
         android:text="@string/txt"
         android:textColor="#959CDD"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDesconectar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDesconectar" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTextoOut"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/edtTextoOut"
@@ -82,7 +85,7 @@
         android:layout_height="44dp"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/edtTextoOut"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
