@@ -15,6 +15,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -59,6 +60,8 @@ public class PlayActivity extends AppCompatActivity {
         Button btnON = findViewById(R.id.btnON);
         Button btnOFF = findViewById(R.id.btnOFF);
         Button btnDesconectar = findViewById(R.id.btnDesconectar);
+        Button btnEnviar = findViewById(R.id.btnEnviar);
+        EditText edtTextoOut = findViewById(R.id.edtTextoOut);
         TextView txtMensaje = findViewById(R.id.txtMensaje);
 //////////////////////////////////////
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -95,9 +98,23 @@ public class PlayActivity extends AppCompatActivity {
          btnOFF.setOnClickListener(v -> MyConexionBT.write("2"));
 
          */
-        btnON.setOnClickListener(v -> sendData("1"));
-        btnOFF.setOnClickListener(v -> sendData("0"));
+        btnON.setOnClickListener(v -> {
+            sendData("1");
+            txtMensaje.setText("Haz prendido el LED");
+        });
+        btnOFF.setOnClickListener(v -> {
+            sendData("0");
+            txtMensaje.setText("Haz apagado el LED");
+        });
+        btnEnviar.setOnClickListener(v -> {
+            sendData("3");
+            txtMensaje.setText("Haz enviado un mensaje al display :o!");
+            sendData(edtTextoOut.getText().toString());
+        });
+
         btnDesconectar.setOnClickListener(v -> {
+            sendData("2");
+            txtMensaje.setText("@string/txt");
             if (btSocket != null) {
                 try {
                     btSocket.close();
