@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- PERMISOS BLUETOOTH -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -17,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Robot2"
         tools:targetApi="31">
+        <activity
+            android:name=".DispositivosVinculadosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlayActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

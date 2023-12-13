@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Robot2</string>
+    <string name="app_name">Robot</string>
+    <string name="dispositivos">DISPOSITIVOS VINCULADOS</string>
+    <string name="led_on">LED ENCENDIDO</string>
+    <string name="led_off">LED APAGADO</string>
+    <string name="txt">Hola!</string>
+    <string name="btn_Off">APAGAR</string>
+    <string name="btn_desconectar">DESCONECTAR</string>
+    <string name="btn_on">ENCENDER</string>
+    <string name="edtTextoOut">Escriba algo aquí</string>
+    <string name="btnEnviar">ENVIAR</string>
 </resources>
